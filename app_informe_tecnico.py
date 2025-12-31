@@ -134,10 +134,10 @@ def crear_documento_tecnico(datos_empresa, datos_cliente, actividades):
 
     # Datos a llenar
     data_rows = [
-        ("FECHA DEL SERVICIO:", datos_empresa["fecha"]),
-        ("TÉCNICO RESPONSABLE:", datos_empresa["tecnico"]),
-        ("UBICACIÓN:", datos_empresa["ubicacion"]),
-        ("ASUNTO:", "Servicio de mantenimiento y limpieza"),
+        ("Fecha del Servicio:", datos_empresa["fecha"]),
+        ("Técnico Responsable:", datos_empresa["tecnico"]),
+        ("Ubicación:", datos_empresa["ubicacion"]),
+        ("Asunto:", "Servicio de mantenimiento y limpieza"),
     ]
 
     for i, (label, value) in enumerate(data_rows):
@@ -150,10 +150,6 @@ def crear_documento_tecnico(datos_empresa, datos_cliente, actividades):
         run = p.add_run(label)
         run.font.bold = True
         run.font.size = Pt(10)
-        # Sombreado gris claro para etiquetas
-        shading_elm = OxmlElement("w:shd")
-        shading_elm.set(qn("w:fill"), "F2F2F2")
-        cell_label._element.get_or_add_tcPr().append(shading_elm)
 
         # Valor
         cell_value = row.cells[1]
@@ -173,9 +169,9 @@ def crear_documento_tecnico(datos_empresa, datos_cliente, actividades):
     tabla_cliente.style = "Table Grid"
 
     client_data = [
-        ("RAZÓN SOCIAL / NOMBRE:", datos_cliente["nombre"]),
+        ("Razon Social / Nombre:", datos_cliente["nombre"]),
         ("NIT / C.C:", datos_cliente["nit"]),
-        ("DIRECCIÓN:", datos_cliente["direccion"]),
+        ("Dirección:", datos_cliente["direccion"]),
     ]
 
     for i, (label, value) in enumerate(client_data):
@@ -187,10 +183,6 @@ def crear_documento_tecnico(datos_empresa, datos_cliente, actividades):
         run = p.add_run(label)
         run.font.bold = True
         run.font.size = Pt(10)
-
-        shading_elm = OxmlElement("w:shd")
-        shading_elm.set(qn("w:fill"), "F2F2F2")
-        cell_label._element.get_or_add_tcPr().append(shading_elm)
 
         cell_value = row.cells[1]
         cell_value.text = value
