@@ -421,7 +421,7 @@ with st.sidebar:
     st.subheader("Objetivo")
     empresa_objetivo = st.text_area(
         "Objetivo del Informe",
-        "A continuación, se describe los trabajos de mantenimiento realizados en el Stard, tanques y cajas, así como las acciones realizadas para corregir las deficiencias con el fin de lograr mejor funcionamiento del sistema.",
+        "A continuación, se describe los trabajos de mantenimiento realizados, tanques y cajas, así como las acciones realizadas para corregir las deficiencias con el fin de lograr mejor funcionamiento del sistema.",
         height=100,
     )
 
