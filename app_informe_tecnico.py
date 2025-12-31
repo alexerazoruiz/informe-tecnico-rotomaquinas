@@ -150,6 +150,10 @@ def crear_documento_tecnico(datos_empresa, datos_cliente, actividades):
         run = p.add_run(label)
         run.font.bold = True
         run.font.size = Pt(10)
+        # Sombreado gris suave
+        shading_elm = OxmlElement("w:shd")
+        shading_elm.set(qn("w:fill"), "F2F2F2")
+        cell_label._element.get_or_add_tcPr().append(shading_elm)
 
         # Valor
         cell_value = row.cells[1]
@@ -183,6 +187,10 @@ def crear_documento_tecnico(datos_empresa, datos_cliente, actividades):
         run = p.add_run(label)
         run.font.bold = True
         run.font.size = Pt(10)
+        # Sombreado gris suave
+        shading_elm = OxmlElement("w:shd")
+        shading_elm.set(qn("w:fill"), "F2F2F2")
+        cell_label._element.get_or_add_tcPr().append(shading_elm)
 
         cell_value = row.cells[1]
         cell_value.text = value
@@ -407,7 +415,7 @@ with st.sidebar:
     st.subheader("Datos del Cliente")
     cliente_nombre = st.text_input("Nombre o Razón Social", "Manuelita S.A.")
     cliente_nit = st.text_input("NIT o C.C.", "891.300.241-9")
-    cliente_direccion = st.text_input("Dirección", "Kilometro 7 Via Palmira El Cerrito")
+    cliente_direccion = st.text_input("Dirección", "Km 7 vÍa Palmira - El Cerrito")
 
     st.markdown("---")
     st.subheader("Objetivo")
