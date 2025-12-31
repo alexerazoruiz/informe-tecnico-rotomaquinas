@@ -411,6 +411,13 @@ with st.sidebar:
     empresa_tecnico = st.text_input("Nombre del Técnico", "")
     empresa_ubicacion = st.text_input("Ubicación del Trabajo", "")
 
+    st.markdown("---")
+    st.subheader("Datos del Cliente")
+    cliente_nombre = st.text_input("Nombre o Razón Social", "Manuelita S.A.")
+    cliente_nit = st.text_input("NIT o C.C.", "891.300.241-9")
+    cliente_direccion = st.text_input("Dirección", "Kilometro 7 Via Palmira El Cerrito")
+
+    st.markdown("---")
     st.subheader("Objetivo")
     empresa_objetivo = st.text_area(
         "Objetivo del Informe",
@@ -424,12 +431,6 @@ with st.sidebar:
         "Antes de iniciar con cualquier tipo de proceso, nuestro personal técnico cuenta con todas las medidas de seguridad necesarias, ya que se encuentran expuestos a diferentes riesgos.",
         height=100,
     )
-
-    st.markdown("---")
-    st.subheader("Datos del Cliente")
-    cliente_nombre = st.text_input("Nombre o Razón Social", "Manuelita S.A.")
-    cliente_nit = st.text_input("NIT o C.C.", "891.300.241-9")
-    cliente_direccion = st.text_input("Dirección", "Kilometro 7 Via Palmira El Cerrito")
 
 # Área principal
 tab1, tab2, tab3 = st.tabs(
