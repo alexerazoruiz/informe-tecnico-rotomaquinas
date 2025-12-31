@@ -406,8 +406,8 @@ with st.sidebar:
     st.header("📋 Información General")
 
     st.subheader("Datos de la Empresa")
-    empresa_nombre_proyecto = st.text_input("Nombre del Proyecto", "LA RITA")
-    empresa_fecha = st.text_input("Fecha del Informe", "NOVIEMBRE 2025")
+    empresa_nombre_proyecto = st.text_input("Nombre del Proyecto", "Hacienda La Rita")
+    empresa_fecha = st.text_input("Fecha del Informe", "01 Enero 2026")
     empresa_tecnico = st.text_input("Nombre del Técnico", "")
     empresa_ubicacion = st.text_input("Ubicación del Trabajo", "")
 
@@ -427,9 +427,9 @@ with st.sidebar:
 
     st.markdown("---")
     st.subheader("Datos del Cliente")
-    cliente_nombre = st.text_input("Nombre o Razón Social", "MANUELITA S.A")
+    cliente_nombre = st.text_input("Nombre o Razón Social", "Manuelita S.A.")
     cliente_nit = st.text_input("NIT o C.C.", "891.300.241-9")
-    cliente_direccion = st.text_input("Dirección", "kilometro 7 via palmira el cerrito")
+    cliente_direccion = st.text_input("Dirección", "Kilometro 7 Via Palmira El Cerrito")
 
 # Área principal
 tab1, tab2, tab3 = st.tabs(
